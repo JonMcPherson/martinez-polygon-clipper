@@ -8,17 +8,17 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'sbt clean package'
+                sh 'sbt -Dsbt.log.noformat=true clean package'
             }
         }
         stage('Test') {
             steps {
-                sh 'sbt test'
+                sh 'sbt -Dsbt.log.noformat=true test'
             }
         }
         stage('Publish') {
             steps {
-                sh 'sbt publish-local'
+                sh 'sbt -Dsbt.log.noformat=true publish-local'
             }
         }
     }
