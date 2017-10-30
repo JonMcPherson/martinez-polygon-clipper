@@ -2,6 +2,8 @@ name := "martinez-polygon-clipper"
 
 version := "1.0.0"
 
+organization := "com.soulfiresoft"
+
 scalaVersion := "2.11.11"
 
 resolvers += "Artifactory Realm" at "https://deadmandungeons.com/artifactory/sbt"
